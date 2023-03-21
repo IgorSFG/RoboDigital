@@ -8,14 +8,15 @@ albedo_color = Color( 0.270588, 0.509804, 0.184314, 1 )
 
 [sub_resource type="CubeMesh" id=2]
 material = SubResource( 1 )
-size = Vector3( 50, 1, 50 )
+size = Vector3( 10, 1, 10 )
 
 [sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.202486, 1, 0.204699 )
 
 [node name="Main" type="Node"]
 
 [node name="StaticBody" type="StaticBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0, 0 )
+transform = Transform( 2, 0, 0, 0, 0.5, 0, 0, 0, 2, 0, 0, 0 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -31,8 +32,8 @@ shape = SubResource( 3 )
 [node name="Player" parent="." instance=ExtResource( 2 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 2, 0 )
 
-[node name="Camera2" type="Camera" parent="."]
-transform = Transform( -1, -1.42109e-14, -8.74228e-08, -5.79955e-08, 0.748273, 0.663391, 6.54161e-08, 0.663391, -0.748273, 0, 15.8944, -25.8267 )
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -1, -1.06582e-14, -8.74228e-08, -3.00265e-08, 0.939166, 0.343463, 8.21045e-08, 0.343463, -0.939166, 0, 8.35793, -16.2445 )
 
 [node name="HUD" parent="." instance=ExtResource( 1 )]
 
