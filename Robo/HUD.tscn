@@ -16,7 +16,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Positions" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Positions"]
 margin_left = -10.0
 margin_top = -14.0
 margin_right = 135.0
@@ -26,15 +34,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="GridContainer" type="GridContainer" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+[node name="GridContainer" type="GridContainer" parent="Positions"]
+margin_right = 93.0
+margin_bottom = 59.0
 columns = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="PosX" type="Label" parent="GridContainer"]
+[node name="PosX" type="Label" parent="Positions/GridContainer"]
 margin_right = 79.0
 margin_bottom = 17.0
 custom_fonts/font = SubResource( 1 )
@@ -43,14 +51,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="PosXValue" type="Label" parent="GridContainer"]
+[node name="PosXValue" type="Label" parent="Positions/GridContainer"]
 margin_left = 83.0
 margin_right = 93.0
 margin_bottom = 17.0
 custom_fonts/font = SubResource( 1 )
 text = "0"
 
-[node name="PosY" type="Label" parent="GridContainer"]
+[node name="PosY" type="Label" parent="Positions/GridContainer"]
 margin_top = 21.0
 margin_right = 79.0
 margin_bottom = 38.0
@@ -60,7 +68,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="PosYValue" type="Label" parent="GridContainer"]
+[node name="PosYValue" type="Label" parent="Positions/GridContainer"]
 margin_left = 83.0
 margin_top = 21.0
 margin_right = 93.0
@@ -68,7 +76,7 @@ margin_bottom = 38.0
 custom_fonts/font = SubResource( 1 )
 text = "0"
 
-[node name="PosZ" type="Label" parent="GridContainer"]
+[node name="PosZ" type="Label" parent="Positions/GridContainer"]
 margin_top = 42.0
 margin_right = 79.0
 margin_bottom = 59.0
@@ -78,10 +86,88 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="PosZValue" type="Label" parent="GridContainer"]
+[node name="PosZValue" type="Label" parent="Positions/GridContainer"]
 margin_left = 83.0
 margin_top = 42.0
 margin_right = 93.0
+margin_bottom = 59.0
+custom_fonts/font = SubResource( 1 )
+text = "0"
+
+[node name="Rotations" type="Control" parent="."]
+margin_top = 500.0
+margin_right = 40.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Rotations"]
+margin_left = -10.0
+margin_top = -14.0
+margin_right = 135.0
+margin_bottom = 66.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="Rotations"]
+margin_right = 93.0
+margin_bottom = 59.0
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PosX" type="Label" parent="Rotations/GridContainer"]
+margin_right = 84.0
+margin_bottom = 17.0
+custom_fonts/font = SubResource( 1 )
+text = "Rotação X:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PosXValue" type="Label" parent="Rotations/GridContainer"]
+margin_left = 88.0
+margin_right = 98.0
+margin_bottom = 17.0
+custom_fonts/font = SubResource( 1 )
+text = "0"
+
+[node name="PosY" type="Label" parent="Rotations/GridContainer"]
+margin_top = 21.0
+margin_right = 84.0
+margin_bottom = 38.0
+custom_fonts/font = SubResource( 1 )
+text = "Rotação Y:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PosYValue" type="Label" parent="Rotations/GridContainer"]
+margin_left = 88.0
+margin_top = 21.0
+margin_right = 98.0
+margin_bottom = 38.0
+custom_fonts/font = SubResource( 1 )
+text = "0"
+
+[node name="PosZ" type="Label" parent="Rotations/GridContainer"]
+margin_top = 42.0
+margin_right = 84.0
+margin_bottom = 59.0
+custom_fonts/font = SubResource( 1 )
+text = "Rotação Z:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PosZValue" type="Label" parent="Rotations/GridContainer"]
+margin_left = 88.0
+margin_top = 42.0
+margin_right = 98.0
 margin_bottom = 59.0
 custom_fonts/font = SubResource( 1 )
 text = "0"

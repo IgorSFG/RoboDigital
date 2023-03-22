@@ -20,6 +20,9 @@ def getTable():
         cod['X'] = row[0]
         cod['Y'] = row[1]
         cod['Z'] = row[2]
+        cod['Rx'] = row[3]
+        cod['Ry'] = row[4]
+        cod['Rz'] = row[5]
         positions.append(cod)
     print(positions)
 
@@ -41,10 +44,13 @@ def addPosition():
     X = request.form["X"]
     Y = request.form["Y"]
     Z = request.form["Z"]
+    RX = request.form["Rx"]
+    RY = request.form["Ry"]
+    RZ = request.form["Rz"]
     
     db = sqlite3.connect("RoboDB.db")
     cursor = db.cursor()
-    cursor.execute('INSERT INTO Robo (X,Y,Z) VALUES (?,?,?)', (X,Y,Z))
+    cursor.execute('INSERT INTO Robo (X,Y,Z, Rx,Ry,Rz) VALUES (?,?,?, ?,?,?)', (X,Y,Z, RX,RY,RZ))
     db.commit()
     db.close()
 

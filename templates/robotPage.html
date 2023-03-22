@@ -17,6 +17,17 @@
         <label for="Z">Z</label>
         <input type="number" id="Z" name="Z" required>
 
+        <br>
+
+        <label for="Rx">Rx</label>
+        <input type="number" id="Rx" name="Rx" required>
+
+        <label for="Ry">Ry</label>
+        <input type="number" id="Ry" name="Ry" required>
+
+        <label for="Rz">Rz</label>
+        <input type="number" id="Rz" name="Rz" required>
+
         <button type="submit">Add</button>
     </form>
     <h1>Posições</h1>
@@ -25,17 +36,28 @@
             <th>X</th>
             <th>Y</th>
             <th>Z</th>
+            <th>Rx</th>
+            <th>Ry</th>
+            <th>Rz</th>
         </tr>
         {% for cod in positions %}
         <tr>
             <td>{{cod["X"]}}</td>
             <td>{{cod["Y"]}}</td>
             <td>{{cod["Z"]}}</td>
+            <td>{{cod["Rx"]}}</td>
+            <td>{{cod["Ry"]}}</td>
+            <td>{{cod["Rz"]}}</td>
         </tr>
         {% endfor %}
     </table>
 </body>
 <style>
+    input {
+    width: 10em;
+    margin-top: 1em;
+    }
+
     h1 {
 	background-color: rgb(53, 222, 252);
 	text-align: center;
