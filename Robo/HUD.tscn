@@ -95,7 +95,9 @@ custom_fonts/font = SubResource( 1 )
 text = "0"
 
 [node name="Rotations" type="Control" parent="."]
-margin_top = 500.0
+anchor_right = 0.914
+anchor_bottom = 0.123
+margin_top = 90.0
 margin_right = 40.0
 __meta__ = {
 "_edit_group_": true,

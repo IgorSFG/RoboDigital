@@ -34,14 +34,6 @@ func PlayerPos(init, final, axis):
 		elif axis == "z": sp.z = 0
 		return init
 
-func RotPlayer(init, final):
-	if final > init:
-		return init + speed
-	elif final < init:
-		return init - speed
-	else:
-		return init
-
 # Se o requerimento HTTP tiver sucesso, iniciará a função
 func _on_HTTPRequest_request_completed(result, response_code, headers, body):
 	var positions = parse_json(body.get_string_from_utf8()) # Valor recebido em JSON
@@ -54,17 +46,16 @@ func _on_HTTPRequest_request_completed(result, response_code, headers, body):
 		print("Y: ", codf.y)
 		codf.z = position['Z']
 		print("Z: ", codf.z)
-		print("")
 		
 		rotf.x = position['Rx']
 		print("Rx: ", rotf.x)
 		rotf.y = position['Ry']
 		print("Ry: ", rotf.y)
-		rotf.y = position['Rx']
+		rotf.z = position['Rz']
 		print("Rz: ", rotf.z)
 		
-		# Enquanto um valor for diferente, será acrescentado um valor até igualar
-		while (cod.x != codf.x or cod.y != codf.y or cod.z != codf.z or rot != rotf):
+		# Enquanto um valor for diferente, será acrescentado a velocidade até igualar
+		while (cod != codf or rot != rotf):
 			cod.x = PlayerPos(cod.x, codf.x, "x")
 			cod.y = PlayerPos(cod.y, codf.y, "y")
 			cod.z = PlayerPos(cod.z, codf.z, "z")
@@ -88,4 +79,5 @@ func _on_HTTPRequest_request_completed(result, response_code, headers, body):
 			
 			# Emite um sinal para o HUD
 			emit_signal("playerpos", cod.x, cod.y, cod.z, rot.x, rot.y, rot.z)
-			yield(get_tree().create_timer(time), "timeout") # Delay
+			# Delay
+			yield(get_tree().create_timer(time), "timeout")
