@@ -4,4 +4,4 @@ O robô digital se baseia em uma simulação realizada na plataforma Godot. Ele 
 # Arquitetura do Sistema
 
 ## Diagrama Geral
-![img](https://github.com/IgorSFG/RoboDigital/Diagrama.jpg)
+![img](https://github.com/IgorSFG/RoboDigital/blob/main/Diagrama.jpg)
