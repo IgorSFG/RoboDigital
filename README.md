@@ -8,7 +8,7 @@ O robô digital se baseia em uma simulação realizada na plataforma Godot. Ele 
 ![Diagrama](https://github.com/IgorSFG/RoboDigital/blob/main/img/Diagrama.jpg)
 
 ## Interface
-A interface do projeto foi feita utilizando como base HTML e CSS e tem como objetivo:
+A interface do projeto foi feita utilizando como base HTML e CSS, e tem como objetivo:
 - Possibilitar a adição de posições que o robô digital irá percorrer.
 - Vizualizar as posições armazenadas no banco de dados.
 
