@@ -26,7 +26,7 @@ O banco de dados SQLite tem uma tabela "Robo" e tem como colunas os valores das 
 ![Tabela](https://github.com/IgorSFG/RoboDigital/blob/main/img/Tabela.jpg)
 
 ## Simulação
-O sistema de simulação mostra uma representação tridimensional de uma cadeia cinemática de um robô. Para a implementação desse processo foi utilizada a engine Godot. A simulação realiza requisições para a API desenvolvida e atualiza a posição do robô junto a sua interface própria conforme os valores disponibilizados.
+O sistema de simulação mostra uma representação tridimensional de uma cadeia cinemática de movimentos de um robô. Para a implementação desse processo foi utilizada a engine Godot, ele realiza requisições para a API desenvolvida e atualiza a posição do robô junto com sua interface própria, conforme os valores disponibilizados na endpoint "/positions".
 
 O vídeo da simulação pode ser visto em:
 [Vídeo da Simulação](https://drive.google.com/file/d/1HY2firxby3nDeF3xuILg5oyQrxLZhb_1/view?usp=sharing)
